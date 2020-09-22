@@ -110,7 +110,7 @@ img {vertical-align: middle;}
 </div>
 
 <script>
-var slideIndex = 0;
+var slideIndex = 1;
 showSlides();
 
 function showSlides() {
@@ -119,15 +119,14 @@ function showSlides() {
   var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1;}    
+  }   
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  //document.write(slideIndex);
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1;} 
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 </script>
