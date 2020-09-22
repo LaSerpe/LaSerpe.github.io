@@ -79,6 +79,7 @@ img {vertical-align: middle;}
 </head>
 <body>
 
+
 <div class="slideshow-container">
 
 <div class="mySlides fade">
@@ -124,12 +125,19 @@ function showSlides() {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex+1].style.display = "block";  
-  dots[slideIndex+1].className += " active";
+  slides[slideIndex].style.display = "block";  
+  dots[slideIndex].className += " active";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 }
 </script>
 
+<h1>
+  the value for number is:
+  <script type="text/javascript">
+    document.write(slides.length)
+  </script>
+</h1>
+    
 </body>
 </html> 
 
