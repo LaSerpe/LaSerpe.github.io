@@ -113,8 +113,10 @@ function showSlides() {
   }
   slides[slideIndex].style.display = "block";  
   dots[slideIndex].className += " active";
-  slideIndex++;
-  if (slideIndex >= slides.length) {slideIndex = 0;} 
+  
+  slideIndex = (slideIndex+1)%slides.length;
+  //slideIndex++;
+  //if (slideIndex >= slides.length) {slideIndex = 0;} 
   setTimeout(showSlides, 4000); 
 }
 </script>
