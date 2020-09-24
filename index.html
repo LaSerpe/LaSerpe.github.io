@@ -176,24 +176,27 @@ layout: default
             <h2 class="contact__title">Contact me!</h2>
             <p class="contact__descr">Interested in knowing more?</p>
 
-            <form action="mailto:giulio.gori@inria.fr" method="post" enctype="text/plain">
+            <form action="mailto:giulio.gori@inria.fr" method="get" enctype="text/plain">
 			Name:<br>
-			<input type="text" name="name"><br>
+			<input type="text" name="name" placeholder="Your name"><br>
 			E-mail:<br>
-			<input type="text" name="mail"><br>
+			<input type="text" name="mail" placeholder="Your email"><br>
 			Your Message:<br>
-			<textarea type="text" name="comment" size="50"></textarea><br><br>
+			<textarea type="text" name="comment" size="50" placeholder="Your message"></textarea><br><br>
 			<input type="submit" value="Send">
-			<input type="reset" value="Reset">
+			<input type="reset" value="Clear form">
 			</form>
-<!-- 
-            <form class="contact__form" action="mailto:giulio.gori@inria.fr" method="post">
-            	var subject="mail from website"
-                <input class="contact__form-input" id="name" type="text" name="name" placeholder="Your name">
-                <input class="contact__form-input" id="email" type="email" name="email" placeholder="Your email">
-                <textarea class="contact__form-tarea" id="body" name="body" placeholder="Your message"></textarea>
-                <input class="contact__form-submit" type="submit" value="Send">
-            </form> -->
+<form>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+</form> 
+
+
+
             <div class="contact__card vcard">
                 <h3 class="contact__card-title">Information</h3>
                 <div class="contact__card-item place">
