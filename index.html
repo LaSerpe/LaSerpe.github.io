@@ -176,8 +176,9 @@ layout: default
             <h2 class="contact__title">Contact me!</h2>
             <p class="contact__descr">Interested in knowing more?</p>
 
-            <form action="/php/contactformphp.php" method="post" enctype="text/plain">
-            	DsWhat is the reason why you are contacting me?<br>
+
+            <form action="mailto:giulio.gori@inria.fr" method="post" enctype="text/plain">
+            	What is the reason why you are contacting me?<br>
 				<input type="radio" id="Not specified" name="qualification" value="Not specified" checked>
 				<label for="Not specified">Not specified</label><br>
 				<input type="radio" id="Professional" name="qualification" value="Professional">
@@ -195,7 +196,7 @@ layout: default
 				Name:<br>
 				<input type="text" name="name" placeholder="Your name" required><br>
 				E-mail:<br>
-				<input type="text" name="email" placeholder="Your email" required><br>
+				<input type="text" name="mail" placeholder="Your email" required><br>
 				Your Message:<br>
 				<textarea type="text" name="comment" size="50" placeholder="Your message" required></textarea><br><br>
 				<input type="submit" name="submit" value="Send">
