@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['email'])) {
+if(isset($_POST['submit'])) {
     $email_to = "giulio.gori@inria.fr";
     $email_subject = "Mail from website";
     $name = $_POST['name']; // required
@@ -27,6 +27,10 @@ $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
 'X-Mailer: PHP/' . phpversion();
 mail($email_to, $email_subject, $email_message, $headers);
-
+// ?/>
+//  
+//
+//  <div class="feedback">Thank you for contacting us. We will be in touch with you very soon.</div>
+//  <?php
 }
 ?>
