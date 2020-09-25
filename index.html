@@ -123,7 +123,7 @@ layout: default
 
 			    <dl>
 			      <dt>2017 - 2020 <b>Marie Sklodowska-Curie Early Stage Researcher</b></dt>
-			        <dd>Fellowship within the <a href="http://utopiae.eu">UTOPIAE</a> H2020-MSCA-ITN-2016<br> 
+			        <dd>Fellowship within the <a href="http://utopiae.eu">UTOPIAE</a> H2020-MSCA-ITN-2016, "Inference and Design of Experiments in Large Scale Flow Problems" (ESR3)<br> 
 			        INRIA/Centre de Mathématiquées Appliqueé, École Polytechnique, IPP, France<br>
 			        <hr>
 			      </dd>
@@ -176,24 +176,32 @@ layout: default
             <h2 class="contact__title">Contact me!</h2>
             <p class="contact__descr">Interested in knowing more?</p>
 
-            <form action="mailto:giulio.gori@inria.fr" method="get" enctype="text/plain">
-			Name:<br>
-			<input type="text" name="name" placeholder="Your name"><br>
-			E-mail:<br>
-			<input type="text" name="mail" placeholder="Your email"><br>
-			Your Message:<br>
-			<textarea type="text" name="comment" size="50" placeholder="Your message"></textarea><br><br>
-			<input type="submit" value="Send">
-			<input type="reset" value="Clear form">
-			</form>
-<form>
-  <input type="radio" id="male" name="gender" value="male">
-  <label for="male">Male</label><br>
-  <input type="radio" id="female" name="gender" value="female">
-  <label for="female">Female</label><br>
-  <input type="radio" id="other" name="gender" value="other">
-  <label for="other">Other</label>
-</form> 
+            <form action="send_email.php" method="post" enctype="text/plain">
+
+				<input type="radio" id="Not specified" name="qualification" value="Not specified" checked>
+				<label for="Not specified">Male</label><br>
+				<input type="radio" id="Professional" name="qualification" value="Professional">
+				<label for="Professional">Male</label><br>
+				<input type="radio" id="Academic" name="qualification" value="Academic">
+				<label for="Accademic">Academic</label><br>
+				<input type="radio" id="Educational" name="qualification" value="Educational">
+				<label for="Accademic">Educational</label><br>
+				<input type="radio" id="Just curiosity" name="qualification" value="Just curiosity">
+				<label for="Accademic">Just curiosity</label><br>
+				<input type="radio" id="other" name="qualification" value="other">
+				<label for="other">Other</label>
+
+				Name:<br>
+				<input type="text" name="name" placeholder="Your name" required><br>
+				E-mail:<br>
+				<input type="text" name="email" placeholder="Your email" required><br>
+				Your Message:<br>
+				<textarea type="text" name="comment" size="50" placeholder="Your message" required></textarea><br><br>
+				<input type="submit" value="Send">
+				<input type="reset" value="Clear form">
+
+
+			</form> 
 
 
 
