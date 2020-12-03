@@ -208,9 +208,9 @@ h1 {
             Because of this, more accurate and complex fluid models need to be employed.
             Computational tools are typically developed with ideal gas applications in mind and, therefore, they become quite ineffective in the context of NICFD.
             Part my research effort is pledged to developing innovative computational tools specifically tailored to NICFD applications.
-            For instance, thanks to a joint effort by Politecnico di Milano, TU Delft and Stanford University, in 2014 I contributed to extending the <a href="https://su2code.github.io">open-source SU2 software suite</a> to perform turbulent Non-Ideal Compressible Fluid-Dynamics (NICFD) simulations <a href="https://doi.org/10.2514/6.2015-2760">1</a>. 
+            For instance, thanks to a joint effort by Politecnico di Milano, TU Delft and Stanford University, in 2014 I contributed to extending the <a href="https://su2code.github.io">open-source SU2 software suite</a> to perform turbulent Non-Ideal Compressible Fluid-Dynamics (NICFD) simulations [<a href="https://doi.org/10.2514/6.2015-2760">1</a>]. 
             I contributed in developing a built-in thermodynamic library, tightly coupled with the existing structure of the code which was properly re-organized for accommodating arbitrary thermophysical models. 
-            The library also implements an interface to an external software, FluidProp[<a href="http://www.asimptote.nl/software/fluidprop">2</a>, giving access to state-of-the-art models for estimating the thermophysical properties of NICFD pure fluids and mixtures.
+            The library also implements an interface to an external software, FluidProp[<a href="http://www.asimptote.nl/software/fluidprop">2</a>], giving access to state-of-the-art models for estimating the thermophysical properties of NICFD pure fluids and mixtures.
           </p>
         </div>
       </div>
@@ -242,17 +242,22 @@ h1 {
     </div> 
 
 
-    <div class="column nicfd software">
+    <div class="column nicfd software orc uquoo">
       <div class="content" style="text-align:  center">
         <h4><b>NICFD: software accuracy assessment</b></h4>
       </div>
       <div class="content" style="display: flex">
         <div align="left" style="width:50%;">
-          <img src="/images/research/icing/icing_uq.png" alt="uncertainty quantification" style="width:100%">
+          <img src="/images/research/NICFD/validation.png" alt="uncertainty quantification" style="width:100%">
         </div>
         <div align="right" style="width:50%; text-align:justify; margin: 20px; overflow: auto; height:300px;">
           <p style="text-align: justify; margin: 10px;">
-             TO FILL SU2 accuracy
+            One of my activities consists in assessing the accuracy of computational models for Non-Ideal Compressible-Fluid Dynamics (NICFD) flows.
+            Computational tools are of the utmost relevance for investigating fundamental physics, for calibrating thermodynamic models, for designing novel experiments and in Organic Rankine Cycle turbomachinery applications (design, optimization and performance assessment).
+            A thorough accuracy assessment necessarily requires a formal and systemathic treatment of the uncertinay inherent the computational model, including its implementation within a computer program, and the uncertainty affecting the operating conditions of the test-rig employed to generate the validation data set.
+            My interest is therefore oriented towards developing novel Uncertainty Quantification (UQ) techniques for handling large scale problems, with a special focus on the validation of NICFD and aeronautical CFD tools.
+            In the past, I have been working on assessing the accuracy of the NICFD solver from the <a href="https://su2code.github.io">open-source SU2 software suite</a> by taking advantage of the first-ever experimental measurements relative to compressible fluid flows in the non-ideal regime [<a href="https://doi.org/10.2514/6.2015-2760">1</a>, <a href="https://doi.org/10.1088/1742-6596/821/1/012013">2</a>, <a href="https://doi.org/10.1016/j.euromechflu.2019.08.014">3</a>]. 
+            Measurements were obtained using the <a hreff="https://www.lfm.polimi.it/facilities/test.php">Test-Rig for Organic Vapour (TROVA)</a>.
           </p>
         </div>
       </div>
