@@ -98,7 +98,16 @@ h1 {
   </div>
   <hr>
 
-  <div class="row" align="center" style="display: flex; justify-content: space-around;" id="myBtnContainer">
+  <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myBtnContainer" aria-expanded="false" aria-controls="navbar"> 
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+  </div>
+
+  <div class="row collapse" align="center" style="display: flex; justify-content: space-around;" id="myBtnContainer">
     <button class="btn btn-danger btn-lg" style="width: 100%; margin: 5px;" onclick="filterSelection('all')"  ></i> Show all</button>
     <button class="btn btn-danger btn-lg" style="width: 100%; margin: 5px;" onclick="filterSelection('modeling')"  ></i> Modeling</button>
     <button class="btn btn-danger btn-lg" style="width: 100%; margin: 5px;" onclick="filterSelection('ice')"  ></i> In-flight icing</button>
@@ -108,7 +117,27 @@ h1 {
     <button class="btn btn-danger btn-lg" style="width: 100%; margin: 5px;" onclick="filterSelection('software')"></i> Software Dev</button>
   </div>
 
-  
+<!-- <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li {% if page.sectionid=='home' %} class="active" {% endif %}><a href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
+                <li {% if page.sectionid=='research' %} class="active" {% endif %}><a href="{{ "/html/research.html" | prepend: site.baseurl }}">Research</a></li>
+                <li {% if page.sectionid=='about' %} class="active" {% endif %}><a href="{{ "/html/about.html" | prepend: site.baseurl }}">About</a></li>
+                <li {% if page.sectionid=='contacts' %} class="active" {% endif %}><a href="{{ "/html/contact.html" | prepend: site.baseurl }}">Contacts</a></li>
+            </ul>
+        </div>
+    </div>
+</nav> -->
+
   <!-- Portfolio Gallery Grid -->
   <div class="row">  
 
