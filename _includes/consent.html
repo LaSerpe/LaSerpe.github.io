@@ -1,20 +1,48 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container navbar-container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> 
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li {% if page.sectionid=='home' %} class="active" {% endif %}><a href="{{ "/index.html" | prepend: site.baseurl }}">Home</a></li>
-                <li {% if page.sectionid=='research' %} class="active" {% endif %}><a href="{{ "/html/research.html" | prepend: site.baseurl }}">Research</a></li>
-                <li {% if page.sectionid=='about' %} class="active" {% endif %}><a href="{{ "/html/about.html" | prepend: site.baseurl }}">About</a></li>
-                <li {% if page.sectionid=='contacts' %} class="active" {% endif %}><a href="{{ "/html/contact.html" | prepend: site.baseurl }}">Contacts</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<style>
+    #cookie-notice {padding: 7px 15px; display: none; text-align: center; position: fixed; bottom: 0; width: 100%; background: #222; color: rgba(255,255,255,0.8);}
+    #cookie-notice a {cursor: pointer; margin-left: 10px;}
+    @media (max-width: 767px) {
+        #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 13px;}
+        #cookie-notice a {position: relative; bottom: 4px;}
+    }
+</style>
+
+<div id="cookie-notice"><span>We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/privacy" class="btn btn-primary btn-sm">More info</a></div>
+<script>
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    if(readCookie('cookie-notice-dismissed')=='true') {
+         {% include ga.js %}
+    } else {
+        $('#cookie-notice').show();
+    }
+    $('#cookie-notice-accept').click(function() {
+        createCookie('cookie-notice-dismissed','true',31);
+        $('#cookie-notice').hide();
+    });
+
+</script>
+
+
+
