@@ -75,28 +75,6 @@ h1 {
   background-color: #666;
   color: white;
 }
-
-.flex-item-left {
-  background-color: #f1f1f1;
-  padding: 10px;
-  flex: 50%;
-}
-
-.flex-item-right {
-  background-color: dodgerblue;
-  height: 300px;
-  overflow: auto;
-  padding: 10px;
-  flex: 50%;
-}
-
-/* Responsive layout - makes a one column-layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .flex-item-right, .flex-item-left {
-    flex: 100%;
-  }
-}
-
 </style>
 
 
@@ -138,15 +116,15 @@ h1 {
 
  
 
-    <div class="column ice software">
+        <div class="column ice software">
       <div class="content" style="text-align:  center">
         <h4><b>Icing: software development</b></h4>
       </div>
       <div class="content" style="display: flex">
-        <div class="flex-item-left">
+        <div align="left" style="width:50%;">
           <img src="/images/research/icing/icing_polimice.png" alt="Software development" style="width:100%">
         </div>
-        <div class="flex-item-right">
+        <div align="right" style="width:50%; text-align:justify; margin: 20px; overflow: auto; height:300px;">
           <p style="text-align: justify; margin: 10px;">
             Since the early beginning of my Academic career, I have been actively involved in the development of computational solvers for predicting ice accretion in aeronautical applications and wind energy.
             I started working on ice accretion simulation solvers while developing my Msc Thesis at Politecnico di Milano <a href="http://hdl.handle.net/10589/81403"> <em>PoliMIce: un ambiente di simulazione per la previsione dell’accrescimento di ghiaccio su velivoli.</em></a>.
