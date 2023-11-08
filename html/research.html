@@ -100,6 +100,7 @@ h1 {
     <button class="btn btn-danger btn-lg" style="width: 150px; margin: 5px;" onclick="filterSelection('uquoo')"></i> UQ & OOU</button>
     <button class="btn btn-danger btn-lg" style="width: 150px; margin: 5px;" onclick="filterSelection('software')"></i> Software Dev</button>
     <button class="btn btn-danger btn-lg" style="width: 150px; margin: 5px;" onclick="filterSelection('hypersonics')"></i> Hypersonics</button>
+    <button class="btn btn-danger btn-lg" style="width: 150px; margin: 5px;" onclick="filterSelection('rotorcraft')"></i> Rotorcraft</button>
   </div>
 
   <div class="row">  
@@ -165,7 +166,7 @@ h1 {
             The complexity of the icing mechanism prevents modeling the properties of the ice structure within a deterministic framework.
             Indeed, the ice layer forming on the airframe during a cloud encounter typically contains small air bubbles that remain trapped due to the fast dynamics of the water liquid-to-solid phase transition mechanism.
             This leads to a not homogeneous ice structure and, naturally, different cloud properties and different environmental conditions lead to the formation of layers with different macroscopic properties (density, thermal conductivity, etc).
-            In this context, I have been particularly interested in developing innovative UQ techniques for modeling the ice accretion mechanism under uncertainty.
+            In this context, I have been particularly interested in developing innovative UQ techniques for modeling the ice accretion mechanism under uncertainty [<a href="https://link.springer.com/content/pdf/10.1007/978-3-030-64725-4_31-1.pdf">1</a>, <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2021-2645">2</a>, <a href="https://arc.aiaa.org/doi/abs/10.2514/1.C036545">3</a>].  
           </p>
         </div>
       </div>
@@ -265,9 +266,9 @@ h1 {
     </div> 
 
 
-    <div class="column nicfd modeling">
+    <div class="column nicfd modeling ice hypersonics">
       <div class="content" style="text-align:  center">
-        <h4><b>NICFD: Bayesian analysis</b></h4>
+        <h4><b>Bayesian methods: model calibration and parameter inference</b></h4>
       </div>
       <div class="content" style="display: flex; flex-wrap: wrap;">
         <div align="left" style="width:530px;">
@@ -279,8 +280,9 @@ h1 {
             The objective is not only to numerically simulate an observed phenomenon with high-fidelity, but also to predict the reality in situations for which the numerical tool has not been specifically validated nor tested. 
             Reliable numerical predictions require sophisticated physical models as well as a systematic and comprehensive treatment of calibration and validation procedures, including the quantification of inherent model uncertainties.
             This objective is particularly difficult with regard to complex multi-physics systems, for which the inference of parameters from noisy data in presence of model uncertainty remains a challenging task. 
-            In this context, I have been concerned with the inference of the coefficients of state-of-the-art thermodynamic models for complex molecular compounds with Non-Ideal Compressible-Fluid Dynamics (NICFD) effects [<a href="https://doi.org/10.1016/j.compfluid.2020.104550">1</a>] using Bayesian methods.
-            My main interest is to numerically assess the potential of using experimental measurements of some NICFD flows to infer the model parameters, supporting the use of Bayesian analysis with synthetic data to investigate, analyze, and design new experiments in the future.
+            In the context of Non-Ideal Compressible-Fluid Dynamics (NICFD), I have been concerned with the inference of the coefficients of state-of-the-art thermodynamic models for complex molecular compounds [<a href="https://doi.org/10.1016/j.compfluid.2020.104550">1</a>].
+            In the field of in-flight ice accretion, I have been working on the inference of the shape of falling snowflakes e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2021-2683">2</a>].
+            Another application of interest is the calibraiton of low-order aerodynamic models to improve the performances of unconventional aircraft tail configurations [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2023-4422">3</a>].
           </p>
         </div>
       </div>
@@ -391,7 +393,7 @@ h1 {
           <p style="text-align: justify; margin: 10px;">
             Hypersonic flight is of the utmost interest of both the Academic and the Industrial communities. Typical applications concern the atmospheric entry of a spacecraft or the powered flight of an aircraft at a high-altitude. The full scope of hypersonic applications spans orbital and suborbital missions entailing research, exploration, and tourism. These include manned spacecraft re-entering atmosphere, re-usable launchers, research and experimental devices, and sub-orbital vehicles.
             From a design standpoint, an accurate prediction of the complex physical phenomena characterizing hypersonic flight is mandatory for improving the design of vehicles operating in such regime. Besides, the optimization quest is made challenging by the uncertainty which unavoidable affects reality e.g., operating conditions, fluid chemical composition, or epistemic uncertainty inherent the computational model. The inability to deterministically handle hypersonic applications can lead to catastrophic failure, such as the case of the NASA X-15, where an unanticipated shock impingement, and the associated localized heating, caused a catastrophic structural failure. Therefore, hypersonic applications call for an assessment of the inherent uncertainty. 
-            In this regard, my research interest is devoted to investigating fundamental aspects related to how the uncertain flow parameters affect the shock pattern in nonequilibrium gas flows around different geometries e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-3532">P1</a>].
+            In this regard, my research interest is devoted to investigating fundamental aspects related to how the uncertain flow parameters affect the shock pattern in nonequilibrium gas flows around different geometries e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-3532">1</a>].
           </p>
         </div>
       </div>
@@ -401,11 +403,67 @@ h1 {
 
 
 
+  <div class="column uquoo hypersonics turbomachinery ice">
+      <div class="content" style="text-align:  center">
+        <h4><b>Design: optimization and optimization under uncertainty</b></h4>
+      </div>
+      <div class="content" style="display: flex; flex-wrap: wrap;">
+        <div align="left" style="width:530px;">
+          <img src="/images/research/ML/bayes_opt.png" alt="uncertainty quantification" style="width:100%">
+        </div>
+        <div align="right" style="width:530px; text-align:justify; margin: 20px; overflow: auto; height:300px;">
+          <p style="text-align: justify; margin: 10px;">
+            In Bayesian optimization, the design space is efficiently searched by taking advantage of the so-called acquisition function, an auxiliary mathematical object that aims at exploiting prior belief and available data. 
+            Different acquisition functions may be exploited, singularly or combined, to further improve the efficiency of the optimization. 
+            In view of investigating possible solutions to the issue of integrating the measure of turbulence modelform uncertainty into traditional design optimization frameworks, we explored several strategies for accounting for the credibility constraint when acquiring a new design point. e.g., [<a href="https://www.sciencedirect.com/user/identity/landing?code=H8LCn3P09ia7d8O2RXJccJGzeGCX4gPFcYRQOLRN&state=retryCounter%3D0%26csrfToken%3Ddcecf629-7c13-4da2-afbe-7f4af3ee26b1%26idpPolicy%3Durn%253Acom%253Aelsevier%253Aidp%253Apolicy%253Aproduct%253Ainst_assoc%26returnUrl%3D%252Fscience%252Farticle%252Fpii%252FS0045793022002171%26prompt%3Dnone%26cid%3Darp-29e7e5e0-9fbd-4217-8247-f619382e66cb">1</a>].
+            Moreover, we explore the potential of multi-fidelity modeling methods to leverage on the concatenation of data sets presenting enormous diversity in terms of information, size, and behavior. Pieces of information of diverse fidelity and complexity complement each other, leading to improved estimate accuracy and to a minimization of the cost associated with parametrization. The applications of interest cover the design of thermal heat shield for hypersonic re-entry problems, turbomachinery, ice thermal protection systems, and the design of aeronautic vehicles e.g., [<a href="https://link.springer.com/content/pdf/10.1007/978-3-030-64725-4_37-1.pdf">2</a>, <a href="https://arc.aiaa.org/doi/abs/10.2514/1.C037223">3</a>, <a href="https://re.public.polimi.it/handle/11311/1186188">4</a>].
+          </p>
+        </div>
+      </div>
+    </div> 
 
 
 
 
+  <div class="column uquoo hypersonics turbomachinery ice">
+      <div class="content" style="text-align:  center">
+        <h4><b>Machine learning: data-driven models, physics informed surrogates, and multi-fidelity models</b></h4>
+      </div>
+      <div class="content" style="display: flex; flex-wrap: wrap;">
+        <div align="left" style="width:530px;">
+          <img src="/images/research/ML/PINN.png" alt="Software development" style="width:100%">
+        </div>
+        <div align="right" style="width:530px; text-align:justify; margin: 20px; overflow: auto; height:300px;">
+          <p style="text-align: justify; margin: 10px;">
+            Innovative deep learning algorithm are proposed to extend the accuracy of the Navier-Stokes model. In particular, the target is focused on high-entalpy flows with the aim to improve the modeling of the translational regime. 
+            The approach under development relies on the addition of a neural network-based closure term that encodes any missing physics and ensures consistency with the balance equations. 
+            The pursued approach is based on the premise that the fundamental principles of physics are universal and must be enforced during the training process of deep learning models of general validity. The aim is a model that can capture the physics underlying the application together with the features encoded in the data, and not just to obtain a mere black-box closure that mimics a prescribed data set. 
+            Moreover, we explore the potential of multi-fidelity modeling methods to leverage on the concatenation of data sets presenting enormous diversity in terms of information, size, and behavior. Pieces of information of diverse fidelity and complexity complement each other, leading to improved estimate accuracy and to a minimization of the cost associated with parametrization. The applications of interest cover the design of thermal heat shield for hypersonic re-entry problems and the design of aeronautic vehicles e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2023-3221">1</a>].
+          </p>
+        </div>
+      </div>
+    </div> 
 
+
+
+  <div class="column uquoo rotorcraft modeling">
+      <div class="content" style="text-align:  center">
+        <h4><b>Rotorcraft: aeroacoustics, design, and multi-fidelity models</b></h4>
+      </div>
+      <div class="content" style="display: flex; flex-wrap: wrap;">
+        <div align="left" style="width:530px;">
+          <img src="/images/research/rotorcraft.png" alt="uncertainty quantification" style="width:100%">
+        </div>
+        <div align="right" style="width:530px; text-align:justify; margin: 20px; overflow: auto; height:300px;">
+          <p style="text-align: justify; margin: 10px;">
+             Innovative multi-fidelity methods for characterizing the aerodynamics and the aeroacoustics of multirotor systems with application to advanced eVTOL aircraft. In this framework, the goal of the activity is a multi-fidelity investigation of two propellers in tandem with rotor disks overlap, reproducing a typical feature of eVTOL architectures in airplane mode flight conditions. 
+             A Ffowcs Williams–Hawkings equation solver is used to compute the aeroacoustic footprint of the test case in different configurations. 
+             The solver is run with both mid-fidelity aerodynamic simulation data obtained with DUST and high-fidelity simulation data obtained with SU2 e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2023-3221">1</a>].
+             A multi-fidelity approach (mixed numerical and experimental data) is also used to calibrate and improve low-order aerodynamic models for predicting the performance of lifting surfaces. The calibration is attained using standard Bayesian inference methods. Related works are limited to the investigation of unconventional stationary lifting surfaces e.g., [<a href="https://arc.aiaa.org/doi/abs/10.2514/6.2023-4422">2</a>, <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-4149">3</a>, <a href="https://arc.aiaa.org/doi/abs/10.2514/6.2022-3902">4</a>].
+          </p>
+        </div>
+      </div>
+    </div> 
 
   </div>
 
